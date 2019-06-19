@@ -13,6 +13,13 @@ public class MultiBuyPromotion implements IPromotion {
     private int threshold;
     private BigDecimal newPrice;
 
+    /**
+     * A promotion that applies when multiple of one type of product have been added to the checkout.
+     *
+     * @param productCode the code of the product for which the promotion applies.
+     * @param threshold the number of the product required for the promotion to be triggered.
+     * @param newPrice the new price to use for the product if the promotion is applicable.
+     */
     public MultiBuyPromotion(String productCode, int threshold, BigDecimal newPrice) {
         this.productCode = productCode;
         this.threshold = threshold;

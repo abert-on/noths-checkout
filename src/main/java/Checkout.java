@@ -13,10 +13,17 @@ public class Checkout {
         this.promotions = promotions;
     }
 
+    /**
+     * Adds a product to the checkout.
+     * @param product to add.
+     */
     public void scan(IProduct product) {
         this.basket.add(product);
     }
 
+    /**
+     * @return the total amount billable at checkout with any promotions applied.
+     */
     public Double total() {
         Basket updated = applyPromotions(this.basket);
         return updated.getTotal();
